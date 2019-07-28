@@ -1,0 +1,13 @@
+<view class="container">
+  <view class='find-input'>
+    <image class="icon-search" src='/images/icon_search.png'></image>
+    <input class="input-search" readonly bind:tap="quickFocusInput"  placeholder='请输入您想要搜索的关键字' placeholder-style='color:#999999;' />
+    <image class="icon_camera" bind:tap="toCamera" src='/images/icon_camera.png'></image>
+  </view>
+  <view class="main">
+    <block wx:for="{{types}}" wx:key="{{index}}">
+      <image class="type" bind:tap="toType" data-index="{{index}}" src="{{item}}" />
+    </block>
+  </view>
+  <share/>
+</view>

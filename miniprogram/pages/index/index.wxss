@@ -1,0 +1,62 @@
+.container {
+  padding-top: 30rpx;
+}
+
+.container .find-input {
+  width: 660rpx;
+  height: 88rpx;
+  margin: auto;
+  line-height: 88rpx;
+  border-radius: 10rpx;
+  border: 1rpx solid #ddd;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 8rpx 60rpx 0 rgba(0, 0, 0, 0.08);
+}
+
+.container .find-input .icon-search {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+}
+
+.container .find-input .icon_camera {
+  width: 45rpx;
+  height: 45rpx;
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+}
+
+.container .find-input .input-search {
+  height: 34rpx;
+  color: #999;
+  white-space: nowrap;
+  width: 515rpx;
+  font-size: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.container .main {
+  padding-top: 150rpx;
+  width: 600rpx;
+  padding-left: 50rpx;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+.container .main .type {
+  margin-right: 50rpx;
+  width: 250rpx;
+  height: 250rpx;
+  border-radius: 30rpx;
+  margin-bottom: 50rpx;
+}
+
+page {
+  background: #f3f3f3;
+}

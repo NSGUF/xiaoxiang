@@ -1,0 +1,47 @@
+.user .header {
+  background: #07b280;
+  display: flex;
+  justify-content: center;
+}
+
+.user .header .btn-user {
+  border: 0px solid #07b280;
+  background-color: #07b280;
+  width: 300rpx;
+  padding: 40rpx 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 50rpx;
+}
+
+.user .header .btn-user .icon-head {
+  background: #fff;
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+}
+
+.user .header .btn-user .tip {
+  margin-top: 30rpx;
+  font-size: 32rpx;
+  color: #fff;
+}
+
+.user .header .desc-info {
+  width: 400rpx;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  justify-content: center;
+  font-size: 32rpx;
+}
+
+.user .header .desc-info .grad {
+  margin-bottom: 20rpx;
+}
+
+page {
+  background: #f3f3f3;
+}

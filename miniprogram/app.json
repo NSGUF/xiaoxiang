@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/user/user",
+    "pages/camera/camera",
+    "pages/examine/examine",
+    "pages/result/result",
+    "pages/commit/commit",
+    "pages/garbage/garbage"
+  ],
+  "window": {
+    "backgroundColor": "#f3f3f3",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#07b280",
+    "navigationBarTitleText": "小象垃圾分类",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/icon_index_default.png",
+        "selectedIconPath": "images/icon_index.png"
+      },
+      {
+        "pagePath": "pages/examine/examine",
+        "text": "测试",
+        "iconPath": "images/icon_test_default.png",
+        "selectedIconPath": "images/icon_test.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "个人中心",
+        "iconPath": "images/icon_user_default.png",
+        "selectedIconPath": "images/icon_user.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "share": "/components/share/share"
+  }
+}

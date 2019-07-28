@@ -1,0 +1,11 @@
+<!--components/share/share.wxml-->
+<view class='share'>
+  <button open-type='contact' class='item'>
+    <image src='/images/icon_service.png' class='icon' />
+    在线客服
+  </button>
+  <button open-type='share' class='item'>
+    <image src='/images/icon-share.png' class='icon' />
+    分享好友
+  </button>
+</view>

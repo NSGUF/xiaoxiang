@@ -1,0 +1,20 @@
+<view class="user">
+    <view class="header">
+        <button class="btn-user" wx:if="{{!userInfo.avatarUrl}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" plain='true'>
+            <image class="icon-head" src="/images/icon_head.png"/>
+            <view class="tip">请点击头像登录</view>
+        </button>
+        <view class="btn-user" wx:if="{{userInfo.avatarUrl}}">
+            <image class="icon-head" src="{{userInfo.avatarUrl}}"/>
+            <view class="tip">{{userInfo.nickName}}</view>
+        </view>
+        <view class="desc-info">
+            <view class="grad">
+                等级：{{grade}}
+            </view>
+            <view class="number">
+                积分：{{number}}
+            </view>
+        </view>
+    </view>
+</view>

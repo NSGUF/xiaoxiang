@@ -1,0 +1,11 @@
+<form class="form-view" bindsubmit="formSubmit">
+    <image class="img" src="/images/no-result.png"> </image>
+    <view class="txt">谢谢您完善垃圾样本，提交库未收藏的垃圾名称，将会帮助更多的其他人,垃圾分类感谢你的贡献</view>
+    <view class="input-info">
+        <view class="title">垃圾名称：</view>
+        <input name="keyword" placeholder="请输入名称" value="{{keyword}}"  placeholder-style='color:#999999;'/>
+    </view>
+    <button class="btn" form-type="submit">
+        提交
+    </button>
+</form>

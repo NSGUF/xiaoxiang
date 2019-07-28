@@ -1,0 +1,50 @@
+.user {
+
+  .header {
+    background: #07b280;
+
+    display: flex;
+    justify-content: center;
+    .btn-user {
+      border:0px solid #07b280;
+      background-color:#07b280;
+      width: 300rpx;
+      padding: 40rpx 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      line-height: 50rpx;
+
+
+      .icon-head {
+        background: #fff;
+        width: 130rpx;
+        height: 130rpx;
+        border-radius: 50%;
+      }
+      .tip {
+        margin-top: 30rpx;
+        font-size: 32rpx;
+        color: #fff;
+      }
+    }
+
+    .desc-info {
+      width: 400rpx;
+      display: flex;
+      flex-direction: column;
+      color: #fff;
+      justify-content: center;
+      font-size: 32rpx;
+
+      .grad {
+        margin-bottom: 20rpx;
+      }
+
+    }
+  }
+}
+page{
+  background: #f3f3f3;
+}

@@ -1,0 +1,47 @@
+.form-view {
+  box-sizing: border-box;
+  padding: 250rpx 100rpx 0 100rpx;
+
+  .img {
+    width: 300rpx;
+    height: 300rpx;
+    display: block;
+    margin: auto;
+    margin-top: 40rpx;
+  }
+  .txt{
+    font-size: 28rpx;
+    color: #666666;
+    margin: 40rpx auto 30rpx;
+    width: 620rpx;
+    box-sizing: border-box;
+  }
+
+  .input-info {
+    width: 620rpx;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    font-size: 30rpx;
+    background: #fff;
+    margin: auto;
+    padding: 20rpx 30rpx;
+    margin-top: 60rpx;
+    box-shadow:0 4rpx 20rpx 0 rgba(51, 51, 51, 0.08);
+
+    .title {
+      margin-right: 10rpx;
+    }
+  }
+  .btn {
+    width: 620rpx;
+    box-sizing: border-box;
+    height: 88rpx;
+    line-height: 88rpx;
+    font-size: 32rpx;
+    background: #07b280;
+    margin-top: 50rpx;
+    color: #fff;
+  }
+
+}

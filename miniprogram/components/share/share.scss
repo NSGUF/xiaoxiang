@@ -1,0 +1,23 @@
+.share {
+  position: fixed;
+  right: 20rpx;
+  bottom: 40rpx;
+  .item {
+    background: #fff;
+    border-radius: 50rpx;
+    padding: 0rpx 20rpx;
+    box-shadow: 0 6rpx 20rpx 0 rgba(51, 51, 51, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30rpx;
+    margin-bottom: 20rpx;
+    line-height: 60rpx;
+
+    .icon {
+      width: 35rpx;
+      height: 35rpx;
+      margin-right: 10rpx;
+    }
+  }
+}

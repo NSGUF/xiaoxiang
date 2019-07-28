@@ -1,0 +1,136 @@
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 660rpx;
+  margin-bottom: 20rpx;
+}
+
+.search-container .find-input {
+  width: 540rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-radius: 10rpx;
+  border: 1rpx solid #ddd;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 8rpx 60rpx 0 rgba(0, 0, 0, 0.08);
+}
+
+.search-container .find-input .icon-search {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+}
+
+.search-container .find-input .icon_camera {
+  width: 45rpx;
+  height: 45rpx;
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+}
+
+.search-container .find-input .input-search {
+  height: 34rpx;
+  color: #999;
+  white-space: nowrap;
+  width: 395rpx;
+  font-size: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.search-container .search-btn {
+  padding: 0 5rpx;
+  margin-left: 14rpx;
+  background: #07b280;
+  border-radius: 20rpx;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  height: 80rpx;
+  color: #fff;
+  text-align: center;
+  width: 100rpx;
+}
+
+.bg-darkGray {
+  background-color: #f6f6f6;
+  color: #ffffff;
+}
+
+.cu-bar .search-form {
+  background-color: #ffffff;
+}
+
+.filter-view {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-view {
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx 50rpx;
+  height: 90rpx;
+  align-items: center;
+}
+
+.img {
+  height: 50rpx;
+  width: 50rpx;
+  margin-right: 30rpx;
+}
+
+.item-ji {
+  background-color: #f6f6f6;
+  color: black;
+}
+
+.cu-dialog {
+  width: 300rpx;
+}
+
+.bg-img {
+  width: 300rpx;
+  height: 300rpx;
+}
+
+.no-view {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  margin-top: 250rpx;
+}
+
+.no-img {
+  width: 300rpx;
+  height: 300rpx;
+}
+
+.content {
+  color: #07b280;
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-top: 30rpx;
+}
+
+.btn-view {
+  margin-top: 40rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.btn-commit {
+  border-radius: 20rpx;
+  background-color: #07b280;
+  color: white;
+  margin: 0 10rpx;
+  padding: 20rpx 80rpx;
+}
+
+page {
+  padding-top: 30rpx;
+}
