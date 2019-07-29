@@ -1,0 +1,40 @@
+<svg data-v-8285e188="" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          preserveAspectRatio="xMidYMid meet" width="60" height="60"
+         color-interpolation-filters="sRGB" class="el-tooltip" >
+        <g data-v-8285e188="" fill="#6AA84F" class="icon-text-wrapper icon-svg-group iconsvg"
+           >
+            <g class="iconsvg-imagesvg" mask="url(#bb787c5ef3b437ca7f6eb0d97c28b274)">
+                <rect fill="#6AA84F" fill-opacity="1" stroke="#6AA84F" stroke-width="2" rx="12" ry="12" x="0" y="0"
+                      width="60" height="60"></rect>
+                <svg x="10.908116907963219" y="10.908116907963219" width="38.18376618407356" height="38.18376618407356"
+                     class="image-svg-svg">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 134.16">
+                        <g>
+                            <g>
+                                <path d="M45.45 57.71a7 7 0 1 0 2 4.95 6.74 6.74 0 0 0-2-4.95z" fill="#ffffff"></path>
+                                <path d="M7.5 126.66v-69a49.07 49.07 0 0 1 4-19.9 43.87 43.87 0 0 1 10.75-16.85 43.61 43.61 0 0 1 32-13.25h58.25a48.16 48.16 0 0 1 35.35 14.65 48.16 48.16 0 0 1 14.65 35.35v69M55.85 7.71a43.1 43.1 0 0 1 30.35 13.2 43.5 43.5 0 0 1 13.3 32 43.34 43.34 0 0 1-13.3 32 43.34 43.34 0 0 1-31.95 13.3h-.8M11.5 37.76a49.24 49.24 0 0 1 10.65-15.45 48 48 0 0 1 33.7-14.6m64.6 119h-67"
+                                      fill="none" stroke="#ffffff" stroke-linecap="square" stroke-miterlimit="3"
+                                      stroke-width="15"></path>
+                            </g>
+                        </g>
+                    </svg>
+                </svg> <!----></g>
+        </g>
+        <mask id="bb787c5ef3b437ca7f6eb0d97c28b274">
+            <rect fill-opacity="1" stroke="white" stroke-width="2" rx="12" ry="12" x="0" y="0" width="60" height="60"
+                  fill="white"></rect>
+            <svg x="10.908116907963219" y="10.908116907963219" width="38.18376618407356" height="38.18376618407356"
+                 class="image-svg-svg" fill="black">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 134.16">
+                    <g>
+                        <g>
+                            <path d="M45.45 57.71a7 7 0 1 0 2 4.95 6.74 6.74 0 0 0-2-4.95z"></path>
+                            <path d="M7.5 126.66v-69a49.07 49.07 0 0 1 4-19.9 43.87 43.87 0 0 1 10.75-16.85 43.61 43.61 0 0 1 32-13.25h58.25a48.16 48.16 0 0 1 35.35 14.65 48.16 48.16 0 0 1 14.65 35.35v69M55.85 7.71a43.1 43.1 0 0 1 30.35 13.2 43.5 43.5 0 0 1 13.3 32 43.34 43.34 0 0 1-13.3 32 43.34 43.34 0 0 1-31.95 13.3h-.8M11.5 37.76a49.24 49.24 0 0 1 10.65-15.45 48 48 0 0 1 33.7-14.6m64.6 119h-67"
+                                  fill="none" stroke="#ffffff" stroke-linecap="square" stroke-miterlimit="3"
+                                  stroke-width="15"></path>
+                        </g>
+                    </g>
+                </svg>
+            </svg>
+        </mask>
+    </svg>
