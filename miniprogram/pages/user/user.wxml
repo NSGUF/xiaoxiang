@@ -1,20 +1,40 @@
 <view class="user">
     <view class="header">
-        <button class="btn-user" wx:if="{{!userInfo.avatarUrl}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" plain='true'>
-            <image class="icon-head" src="/images/icon_head.png"/>
-            <view class="tip">请点击头像登录</view>
-        </button>
-        <view class="btn-user" wx:if="{{userInfo.avatarUrl}}">
-            <image class="icon-head" src="{{userInfo.avatarUrl}}"/>
-            <view class="tip">{{userInfo.nickName}}</view>
+        <image class="banner" src="/images/user-banner.png"></image>
+        <view class="container">
+            <button class="btn-user" wx:if="{{!userInfo.avatarUrl}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" plain='true'>
+                <image class="icon-head" src="/images/icon_head.png"/>
+                <view class="tip">请点击头像登录</view>
+            </button>
+            <view class="btn-user" wx:if="{{userInfo.avatarUrl}}">
+                <image class="icon-head" src="{{userInfo.avatarUrl}}"/>
+                <view class="tip">{{userInfo.nickName}}</view>
+            </view>
+            <view class="desc-info">
+                <view class="item">
+                    <text>{{grade}}</text>
+                    当前等级
+                </view>
+                <view class="decorate"></view>
+                <view class="item">
+                    <text>{{number}}</text>
+                    当前积分
+                </view>
+            </view>
         </view>
-        <view class="desc-info">
-            <view class="grad">
-                等级：{{grade}}
+
+
+    </view>
+    <view class="setting">
+        <view class="item" bind:tap="toPage" data-url="/pages/commit/commit">
+            <view class="info">
+                <image src="/images/icon-more.png" class="icon-setting"></image>
+                提交新数据
             </view>
-            <view class="number">
-                积分：{{number}}
-            </view>
+            <image src="/images/icon-right.png" class="icon-right"></image>
         </view>
     </view>
+
+
+    <share/>
 </view>

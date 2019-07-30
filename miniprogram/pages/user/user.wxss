@@ -1,45 +1,114 @@
-.user .header {
-  background: #07b280;
-  display: flex;
-  justify-content: center;
+.user .header .banner {
+  height: 400rpx;
+  width: 750rpx;
 }
 
-.user .header .btn-user {
+.user .header .container {
+  width: 690rpx;
+  margin: auto;
+  border-radius: 16rpx;
+  padding-top: 26rpx;
+  background: #fff;
+  box-shadow: 0 10rpx 40rpx 0 rgba(10, 113, 238, 0.1);
+  z-index: 101;
+  position: relative;
+  margin-top: -340rpx;
+  padding-bottom: 35rpx;
+}
+
+.user .header .container .btn-user {
   border: 0px solid #07b280;
-  background-color: #07b280;
-  width: 300rpx;
+  width: 600rpx;
   padding: 40rpx 0;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
   line-height: 50rpx;
 }
 
-.user .header .btn-user .icon-head {
-  background: #fff;
+.user .header .container .btn-user .icon-head {
   width: 130rpx;
   height: 130rpx;
   border-radius: 50%;
 }
 
-.user .header .btn-user .tip {
+.user .header .container .btn-user .tip {
   margin-top: 30rpx;
-  font-size: 32rpx;
-  color: #fff;
+  font-size: 36rpx;
+  color: #000;
+  font-weight: bold;
+  margin-left: 20rpx;
 }
 
-.user .header .desc-info {
-  width: 400rpx;
+.user .header .container .desc-info {
+  width: 600rpx;
+  display: flex;
+  color: #000;
+  justify-content: space-around;
+  font-size: 32rpx;
+}
+
+.user .header .container .desc-info .decorate {
+  height: 100rpx;
+  width: 2rpx;
+  background: #c5c5c5;
+  border-radius: 1rpx;
+}
+
+.user .header .container .desc-info .item {
   display: flex;
   flex-direction: column;
-  color: #fff;
-  justify-content: center;
-  font-size: 32rpx;
+  align-items: center;
+  color: #666666;
+  font-size: 30rpx;
 }
 
-.user .header .desc-info .grad {
+.user .header .container .desc-info .item > text {
+  font-size: 34rpx;
+  color: #000;
+  font-weight: bold;
   margin-bottom: 20rpx;
+}
+
+.user .setting .item:nth-last-child(1) {
+  border: 0;
+}
+
+.user .setting {
+  width: 690rpx;
+  margin: auto;
+  border-radius: 16rpx;
+  margin-top: 50rpx;
+  background: #fff;
+  box-shadow: 0 10rpx 40rpx 0 rgba(10, 113, 238, 0.1);
+}
+
+.user .setting .item {
+  display: flex;
+  font-size: 30rpx;
+  color: #666666;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40rpx 40rpx;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #eee;
+}
+
+.user .setting .item .info {
+  display: flex;
+  font-size: 30rpx;
+  color: #666666;
+  align-items: center;
+}
+
+.user .setting .item .info .icon-setting {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 25rpx;
+}
+
+.user .setting .item .icon-right {
+  width: 40rpx;
+  height: 40rpx;
 }
 
 page {

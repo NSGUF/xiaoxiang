@@ -69,12 +69,33 @@
   flex-direction: column;
 }
 
-.item-view {
+.filter-view .item {
   display: flex;
-  flex-direction: row;
-  padding: 20rpx 50rpx;
-  height: 90rpx;
+  font-size: 30rpx;
+  color: #666666;
   align-items: center;
+  justify-content: space-between;
+  padding: 30rpx 50rpx;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #eee;
+}
+
+.filter-view .item .info {
+  display: flex;
+  font-size: 30rpx;
+  color: #666666;
+  align-items: center;
+}
+
+.filter-view .item .info .type-img {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 25rpx;
+}
+
+.filter-view .item .icon-right {
+  width: 40rpx;
+  height: 40rpx;
 }
 
 .img {
@@ -121,6 +142,7 @@
   margin-top: 40rpx;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .btn-commit {
@@ -129,6 +151,61 @@
   color: white;
   margin: 0 10rpx;
   padding: 20rpx 80rpx;
+}
+
+.fail-info .status-img {
+  width: 332rpx;
+  height: 246rpx;
+  margin: 115rpx auto 60rpx;
+  display: block;
+}
+
+.fail-info .fail-tip {
+  font-size: 32rpx;
+  color: #444444;
+  text-align: center;
+}
+
+.fail-info .fail-reason {
+  text-align: center;
+  color: #ff6666;
+  font-size: 28rpx;
+  max-width: 690rpx;
+  margin: auto;
+  margin-top: 20rpx;
+}
+
+.fail-info .service-info {
+  margin: 90rpx auto 30rpx;
+}
+
+.fail-info .service-info .service-info-tip {
+  font-size: 26rpx;
+  color: #999999;
+  text-align: center;
+  margin-bottom: 10rpx;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+}
+
+.fail-info .service-info .service-info-tip .phone-info {
+  color: #07b280;
+}
+
+.fail-info navigator {
+  width: 690rpx;
+  height: 88rpx;
+  border-radius: 10rpx;
+  background: #07b280;
+  color: #fff;
+  line-height: 88rpx;
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+
+Page {
+  background: #ffffff;
 }
 
 page {

@@ -10,11 +10,11 @@ Page({
    */
   data: {
     accessToken: "",
-    isShow: false,
     results: [{"score": 0.685739, "root": "人物-人物特写", "keyword": "人物特写"}, {"score": 0.471074, "root": "人物活动-人物特写", "keyword": "男孩"}, {"score": 0.322971, "root": "人物-人物特写", "keyword": "人脸"}, {"score": 0.165124, "root": "商品-眼镜", "keyword": "太阳镜"}, {"score": 0.017557, "root": "商品-眼镜", "keyword": "眼镜"}],
     src: "",
     isCamera: true,
-    btnTxt: "拍照"
+    btnTxt: "拍照",
+    isShowModal: false,
   },
 
   /**
@@ -132,7 +132,7 @@ Page({
       var results = res.data.result
       if (results != undefined && results != null) {
         that.setData({
-          isShow: true,
+          isShowModal: true,
           results: results
         })
       } else {
@@ -163,14 +163,12 @@ Page({
       }
     })
   },
-  radioChange: function(e) {
-    wx.navigateTo({
-      url: '/pages/result/result?keyword=' + e.detail.value,
-    })
-  },
-  hideModal: function() {
+  chooseItem: function(e) {
     this.setData({
-      isShow: false,
+      isShowModal: false
+    })
+    wx.navigateTo({
+      url: '/pages/result/result?keyword=' + e.detail.keyword,
     })
   },
   stopRecord() {
@@ -186,9 +184,4 @@ Page({
   error(e) {
     console.log(e.detail)
   },
-  hideDialog: function() {
-    this.setData({
-      isShow: false
-    })
-  }
 })

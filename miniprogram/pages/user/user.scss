@@ -1,45 +1,123 @@
 .user {
 
   .header {
-    background: #07b280;
 
-    display: flex;
-    justify-content: center;
-    .btn-user {
-      border:0px solid #07b280;
-      background-color:#07b280;
-      width: 300rpx;
-      padding: 40rpx 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      line-height: 50rpx;
+    .banner {
+      height: 400rpx;
+      width: 750rpx;
+    }
+
+    .container {
+      width:690rpx;
+      margin:auto;
+      border-radius:16rpx;
+      padding-top:26rpx;
+      background:#fff;
+      box-shadow:0 10rpx 40rpx 0 rgba(10, 113, 238, 0.1);
+      z-index:101;
+      position:relative;
+      margin-top:-340rpx;
+      padding-bottom:35rpx;
 
 
-      .icon-head {
-        background: #fff;
-        width: 130rpx;
-        height: 130rpx;
-        border-radius: 50%;
+      .btn-user {
+        border:0px solid #07b280;
+        width: 600rpx;
+        padding: 40rpx 0;
+        display: flex;
+        justify-content: start;
+        line-height: 50rpx;
+
+
+        .icon-head {
+          width: 130rpx;
+          height: 130rpx;
+          border-radius: 50%;
+        }
+        .tip {
+          margin-top: 30rpx;
+          font-size: 36rpx;
+          color: #000;
+          font-weight: bold;
+          margin-left: 20rpx;
+        }
       }
-      .tip {
-        margin-top: 30rpx;
+
+      .desc-info {
+        width: 600rpx;
+        display: flex;
+        color: #000;
+        justify-content: space-around;
         font-size: 32rpx;
-        color: #fff;
+
+        .decorate {
+          height: 100rpx;
+          width: 2rpx;
+          background: #c5c5c5;
+          border-radius: 1rpx;
+        }
+
+        .item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          color: #666666;
+          font-size: 30rpx;
+
+          > text {
+            font-size: 34rpx;
+            color: #000;
+            font-weight: bold;
+            margin-bottom: 20rpx;
+          }
+        }
+
       }
     }
 
-    .desc-info {
-      width: 400rpx;
-      display: flex;
-      flex-direction: column;
-      color: #fff;
-      justify-content: center;
-      font-size: 32rpx;
+  }
 
-      .grad {
-        margin-bottom: 20rpx;
+  .setting .item:nth-last-child(1) {
+    border: 0;
+  }
+
+  .setting {
+    width:690rpx;
+    margin:auto;
+    border-radius:16rpx;
+    margin-top: 50rpx;
+    background:#fff;
+    box-shadow:0 10rpx 40rpx 0 rgba(10, 113, 238, 0.1);
+
+
+    .item {
+      display: flex;
+      font-size: 30rpx;
+      color: #666666;
+      align-items:center;
+      justify-content: space-between;
+      padding:40rpx 40rpx;
+      box-sizing:border-box;
+      border-bottom:1rpx solid #eee;
+
+      .info {
+        display: flex;
+        font-size: 30rpx;
+        color: #666666;
+        align-items:center;
+
+
+        .icon-setting {
+          width: 40rpx;
+          height: 40rpx;
+          margin-right: 25rpx;
+        }
+
+      }
+
+      .icon-right {
+        width: 40rpx;
+        height: 40rpx;
       }
 
     }

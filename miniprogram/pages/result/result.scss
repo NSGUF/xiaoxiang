@@ -62,13 +62,38 @@
 .filter-view {
   display: flex;
   flex-direction: column;
-}
-.item-view{
-  display: flex;
-  flex-direction: row;
-  padding: 20rpx 50rpx;
-  height: 90rpx;
-  align-items: center;
+
+  .item {
+    display: flex;
+    font-size: 30rpx;
+    color: #666666;
+    align-items:center;
+    justify-content: space-between;
+    padding:30rpx 50rpx;
+    box-sizing:border-box;
+    border-bottom:1rpx solid #eee;
+
+    .info {
+      display: flex;
+      font-size: 30rpx;
+      color: #666666;
+      align-items:center;
+
+
+      .type-img {
+        width: 40rpx;
+        height: 40rpx;
+        margin-right: 25rpx;
+      }
+
+    }
+
+    .icon-right {
+      width: 40rpx;
+      height: 40rpx;
+    }
+
+  }
 }
 .img{
   height: 50rpx;
@@ -107,6 +132,7 @@
   margin-top: 40rpx;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 .btn-commit{
   border-radius: 20rpx;
@@ -114,6 +140,55 @@
   color: white;
   margin:0 10rpx;
   padding: 20rpx 80rpx;
+}
+.fail-info{
+  .status-img{
+    width:332rpx;
+    height:246rpx;
+    margin:115rpx auto 60rpx;
+    display: block;
+  }
+  .fail-tip{
+    font-size: 32rpx;
+    color:#444444;
+    text-align: center;
+  }
+  .fail-reason{
+    text-align: center;
+    color:#ff6666;
+    font-size: 28rpx;
+    max-width: 690rpx;
+    margin: auto;
+    margin-top: 20rpx;
+  }
+  .service-info{
+    margin: 90rpx auto 30rpx;
+    .service-info-tip{
+      font-size: 26rpx;
+      color:#999999;
+      text-align: center;
+      margin-bottom: 10rpx;
+      margin-left: 50rpx;
+      margin-right: 50rpx;
+      .phone-info{
+        color:#07b280;
+      }
+    }
+  }
+  navigator{
+    width:690rpx;
+    height:88rpx;
+    border-radius: 10rpx;
+    background: #07b280;
+    color:#fff;
+    line-height: 88rpx;
+    text-align: center;
+    display: block;
+    margin: auto;
+  }
+}
+Page{
+  background: #ffffff;
 }
 
 page{

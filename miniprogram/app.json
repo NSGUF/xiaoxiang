@@ -6,7 +6,8 @@
     "pages/examine/examine",
     "pages/result/result",
     "pages/commit/commit",
-    "pages/garbage/garbage"
+    "pages/garbage/garbage",
+    "pages/subject/subject"
   ],
   "window": {
     "backgroundColor": "#f3f3f3",
@@ -24,7 +25,7 @@
         "selectedIconPath": "images/icon_index.png"
       },
       {
-        "pagePath": "pages/examine/examine",
+        "pagePath": "pages/subject/subject",
         "text": "测试",
         "iconPath": "images/icon_test_default.png",
         "selectedIconPath": "images/icon_test.png"
@@ -39,6 +40,8 @@
   },
   "sitemapLocation": "sitemap.json",
   "usingComponents": {
-    "share": "/components/share/share"
+    "share": "/components/share/share",
+    "authorize": "/components/authorize/authorize",
+    "modal": "/components/modal/modal"
   }
 }

@@ -1,0 +1,68 @@
+
+page{
+  background: #f3f3f3;
+}
+
+.subject {
+  padding-bottom: 40rpx;
+
+  .title {
+    font-size: 38rpx;
+    color: #666;
+    margin: 40rpx 50rpx;
+    margin-bottom: 0;
+  }
+
+  .container {
+    .item {
+      position: relative;
+      box-shadow: 0 8rpx 60rpx 0 rgba(0, 0, 0, 0.08);
+      height: 280rpx;
+      width: 690rpx;
+      margin: auto;
+      border-radius: 16rpx;
+      margin-top: 40rpx;
+
+      .bg-img {
+        border-radius: 16rpx;
+        height: 280rpx;
+        width: 690rpx;
+      }
+      .mask {
+        border-radius: 16rpx;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(0,0,0, 0.5);
+      }
+
+      .tip {
+        position: absolute;
+        top: 15rpx;
+        left: 20rpx;
+        font-size: 34rpx;
+        color: #fff;
+      }
+      .number {
+        position: absolute;
+        top: 70rpx;
+        left: 20rpx;
+        font-size: 30rpx;
+        color: #fff;
+
+      }
+      .btn {
+        position: absolute;
+        bottom: 25rpx;
+        right: 20rpx;
+        font-size: 32rpx;
+        color: #fff;
+        border: #fff solid 4rpx;
+        border-radius: 10rpx;
+        padding: 5rpx 10rpx;
+      }
+    }
+  }
+}

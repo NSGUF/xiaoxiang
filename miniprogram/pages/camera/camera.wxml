@@ -7,13 +7,5 @@
 <view class='photo-view'>
     <view class='takePhoto' bindtap="takePhoto">{{btnTxt}}</view>
 </view>
-<view class='dialog-result' wx:if="{{isShow}}"  bindtap="hideDialog">
-    <view class="mask"></view>
-    <radio-group class="container" bindchange="radioChange">
-        <label class="item" wx:for="{{results}}" wx:key="index">
-            <view class="item-key">{{item.keyword}}</view>
-            <radio class="round" value="{{item.keyword}}"></radio>
-        </label>
-    </radio-group>
-</view>
 
+<modal bind:chooseItem="chooseItem" isShowModal="{{isShowModal}}" items="{{results}}"/>

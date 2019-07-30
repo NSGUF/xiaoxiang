@@ -1,4 +1,4 @@
-//app.js
+
 App({
   onLaunch: function () {
     
@@ -32,6 +32,7 @@ App({
             // wx.navigateTo({
             //   url: '../userConsole/userConsole',
             // })
+
           },
           fail: err => {
             console.error('[云函数] [login] 调用失败', err)

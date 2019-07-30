@@ -10,8 +10,6 @@ Page({
     grade: '菜鸟',
     number: '0',
     userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
 
   /**
@@ -20,27 +18,28 @@ Page({
   onLoad: function (options) {
     if (app.globalData.userInfo) {
       this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
+        userInfo: app.globalData.userInfo
       })
-    } else if (this.data.canIUse) {
+      console.log(app.globalData)
+    } else if (wx.canIUse('button.open-type.getUserInfo')) {
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
       app.userInfoReadyCallback = res => {
         this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
+          userInfo: res.userInfo
         })
+        console.log(app.globalData)
       }
     } else {
       // 在没有 open-type=getUserInfo 版本的兼容处理
       wx.getUserInfo({
         success: res => {
+          console.log(res)
           app.globalData.userInfo = res.userInfo
           this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
+            userInfo: res.userInfo
           })
+          console.log(app.globalData)
         }
       })
     }
@@ -48,9 +47,9 @@ Page({
   getUserInfo: function (e) {
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
+      userInfo: e.detail.userInfo
     })
+    console.log(app.globalData)
   },
 
   /**
@@ -100,5 +99,11 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  toPage: function (e) {
+    console.log(e)
+    wx.navigateTo({
+      url: e.currentTarget.dataset.url
+    })
   }
 })
