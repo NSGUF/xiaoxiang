@@ -1,0 +1,165 @@
+.examine {
+  width: 100%;
+  background: #fff;
+  margin: auto;
+  box-shadow: 0 2rpx 10rpx #fff;
+  padding-bottom: 40rpx;
+  padding-top: 90rpx;
+}
+
+.examine .question {
+  font-size: 36rpx;
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+
+.examine .question > text {
+  font-size: 48rpx;
+  color: #07b280;
+  font-weight: bold;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+
+.examine .tip {
+  display: inline-block;
+  background: #666;
+  color: white;
+  padding: 5rpx 10rpx;
+  border-radius: 5rpx;
+  font-size: 24rpx;
+  margin-left: 50rpx;
+  margin-top: 40rpx;
+}
+
+.examine .answer {
+  margin-left: 50rpx;
+  margin-top: 40rpx;
+}
+
+.examine .answer .item {
+  margin-top: 20rpx;
+  border: 1rpx solid #f5f5f5;
+  height: 77rpx;
+  padding-left: 30rpx;
+  line-height: 77rpx;
+  margin-right: 50rpx;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  color: #444444;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.examine .answer .item .icon-right {
+  width: 30rpx;
+  height: 30rpx;
+  visibility: hidden;
+  margin-right: 30rpx;
+}
+
+.examine .answer .item .left > text {
+  color: #000000;
+  font-size: 32rpx;
+  margin-right: 20rpx;
+}
+
+.examine .answer .right {
+  border: 1rpx solid #cbece5;
+  background: #dcf0e8;
+}
+
+.examine .answer .right .icon-right {
+  visibility: visible;
+}
+
+.examine .answer .error {
+  border: 1rpx solid #f7dbda;
+  background: #f9e5e3;
+}
+
+.examine .answer .error .icon-right {
+  visibility: visible;
+}
+
+.all-answer {
+  width: 100%;
+  background: #fff;
+  margin: auto;
+  margin-top: 40rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 2rpx 10rpx #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.all-answer .you {
+  line-height: 77rpx;
+  height: 77rpx;
+  margin-left: 50rpx;
+  font-size: 28rpx;
+}
+
+.all-answer .you > text {
+  color: #07b280;
+  font-size: 32rpx;
+}
+
+.all-answer .right {
+  margin-right: 50rpx;
+  font-size: 28rpx;
+  line-height: 77rpx;
+  height: 77rpx;
+}
+
+.all-answer .right > text {
+  color: #e75c23;
+  font-size: 32rpx;
+}
+
+.confirm-btn {
+  height: 77rpx;
+  padding-left: 30rpx;
+  line-height: 77rpx;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  display: block;
+  background: #07b280;
+  width: 650rpx;
+  margin: 0 50rpx;
+  margin-top: 50rpx;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+.description {
+  color: #666;
+  width: 100%;
+  background: #fff;
+  margin: auto;
+  padding-top: 40rpx;
+  margin-top: 40rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 2rpx 10rpx #fff;
+  padding-bottom: 50rpx;
+}
+
+.description .title {
+  font-size: 28rpx;
+  margin-right: 50rpx;
+  color: #000;
+  margin-left: 50rpx;
+}
+
+.description .desc {
+  font-size: 22rpx;
+  margin-right: 50rpx;
+  line-height: 34rpx;
+  margin-left: 50rpx;
+  margin-top: 15rpx;
+}
+
+page {
+  background: #f7f7f7;
+}

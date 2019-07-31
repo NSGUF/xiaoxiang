@@ -91,6 +91,7 @@
   padding: 40rpx 40rpx;
   box-sizing: border-box;
   border-bottom: 1rpx solid #eee;
+  height: 100rpx;
 }
 
 .user .setting .item .info {

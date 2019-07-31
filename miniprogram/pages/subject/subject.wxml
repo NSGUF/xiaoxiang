@@ -1,0 +1,32 @@
+
+<view class="subject">
+    <view class="title">
+        进阶篇
+    </view>
+
+    <view class="container">
+        <view class="item" bind:tap="toDoExamine">
+            <view class="mask"></view>
+            <image class="bg-img" src="/images/examine-bg1.jpg"></image>
+            <view class="tip">涵盖所有题目</view>
+            <view class="number">共32题</view>
+            <view class="btn">开始测试</view>
+        </view>
+    </view>
+    <view class="title">
+        趣味篇
+    </view>
+
+    <view class="container">
+        <view class="item" bind:tap="toDoExamine">
+            <view class="mask"></view>
+            <image class="bg-img" src="/images/examine-bg1.jpg"></image>
+            <view class="tip">涵盖所有题目</view>
+            <view class="number">共32题</view>
+            <view class="btn">开始测试</view>
+        </view>
+    </view>
+<!--    <authorize id='dialog' bind:infoSaved='infoSaved' bind:infoReject='infoReject'></authorize>-->
+
+    <share/>
+</view>

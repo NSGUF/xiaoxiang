@@ -2,6 +2,7 @@
   position: fixed;
   right: 20rpx;
   bottom: 40rpx;
+  z-index: 1;
 }
 
 .share .item {

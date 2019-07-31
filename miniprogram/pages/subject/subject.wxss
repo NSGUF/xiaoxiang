@@ -1,0 +1,75 @@
+page {
+  background: #f3f3f3;
+}
+
+.subject {
+  padding-bottom: 40rpx;
+}
+
+.subject .title {
+  margin-top: 60rpx;
+  font-size: 36rpx;
+  line-height: 36rpx;
+  color: #3e3d53;
+  display: block;
+  padding-left: 40rpx;
+  margin-bottom: 20rpx;
+}
+
+.subject .container .item {
+  position: relative;
+  box-shadow: 0 8rpx 60rpx 0 rgba(0, 0, 0, 0.08);
+  height: 280rpx;
+  width: 690rpx;
+  margin: auto;
+  border-radius: 16rpx;
+  margin-top: 40rpx;
+}
+
+.subject .container .item .bg-img {
+  border-radius: 16rpx;
+  height: 280rpx;
+  width: 690rpx;
+  filter: blur(1rpx);
+}
+
+.subject .container .item .mask {
+  border-radius: 16rpx;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.subject .container .item .tip {
+  position: absolute;
+  top: 15rpx;
+  left: 20rpx;
+  font-size: 34rpx;
+  color: #fff;
+  z-index: 1;
+}
+
+.subject .container .item .number {
+  position: absolute;
+  top: 70rpx;
+  left: 20rpx;
+  font-size: 30rpx;
+  color: #fff;
+  z-index: 1;
+}
+
+.subject .container .item .btn {
+  position: absolute;
+  bottom: 25rpx;
+  right: 20rpx;
+  font-size: 32rpx;
+  color: #fff;
+  border: #fff solid 4rpx;
+  border-radius: 10rpx;
+  padding: 5rpx 10rpx;
+  z-index: 1;
+}

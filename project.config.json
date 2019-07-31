@@ -39,7 +39,7 @@
 					"id": 0,
 					"name": "pages/examine/examine",
 					"pathName": "pages/examine/examine",
-					"query": "",
+					"query": "examineTypes=0",
 					"scene": null
 				},
 				{
@@ -60,6 +60,20 @@
 					"id": -1,
 					"name": "pages/user/user",
 					"pathName": "pages/user/user",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/examine/examine",
+					"pathName": "pages/examine/examine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/subject/subject",
+					"pathName": "pages/subject/subject",
 					"query": "",
 					"scene": null
 				}

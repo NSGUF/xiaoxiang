@@ -1,0 +1,10 @@
+<view class='dialog-result' wx:if="{{isShowModal}}"  bindtap="hideDialog">
+    <view class="mask"></view>
+    <view class="container">
+        <view class="item" wx:for="{{items}}" wx:key="index" data-item="{{item}}" bind:tap="chooseItem">
+            <view class="info">{{item.keyword}}</view>
+            <image class="icon-right" src="/images/icon-right.png"></image>
+        </view>
+    </view>
+</view>
+

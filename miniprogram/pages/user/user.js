@@ -20,7 +20,6 @@ Page({
       this.setData({
         userInfo: app.globalData.userInfo
       })
-      console.log(app.globalData)
     } else if (wx.canIUse('button.open-type.getUserInfo')) {
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
@@ -28,13 +27,11 @@ Page({
         this.setData({
           userInfo: res.userInfo
         })
-        console.log(app.globalData)
       }
     } else {
       // 在没有 open-type=getUserInfo 版本的兼容处理
       wx.getUserInfo({
         success: res => {
-          console.log(res)
           app.globalData.userInfo = res.userInfo
           this.setData({
             userInfo: res.userInfo
@@ -49,7 +46,17 @@ Page({
     this.setData({
       userInfo: e.detail.userInfo
     })
-    console.log(app.globalData)
+    wx.cloud.callFunction({
+      name: 'updateUserDesc',
+      data: {
+        userDesc: app.globalData.userInfo,
+      },
+      success: res => {
+      },
+      fail: res => {
+        console.log(res)
+      }
+    })
   },
 
   /**
@@ -101,7 +108,6 @@ Page({
 
   },
   toPage: function (e) {
-    console.log(e)
     wx.navigateTo({
       url: e.currentTarget.dataset.url
     })

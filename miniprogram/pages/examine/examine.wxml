@@ -1,0 +1,58 @@
+<view class="examine">
+    <view class="question">
+        请问<text>问题</text>是什么垃圾？
+    </view>
+    <view class="tip">
+        点击下面选项
+    </view>
+    <view class="answer">
+        <view class="item right">
+            <view class="left">
+                <text>A</text>
+                可回收垃圾
+            </view>
+            <image class="icon-right" src="/images/icon-{{true?'gou':'cha'}}.png"></image>
+        </view>
+        <view class="item error">
+            <view class="left">
+                <text>B</text>
+                有害垃圾
+            </view>
+            <image class="icon-right" src="/images/icon-{{false?'gou':'cha'}}.png"></image>
+        </view>
+        <view class="item">
+            <view class="left">
+                <text>C</text>
+                湿垃圾
+            </view>
+            <image class="icon-right" src="/images/icon-{{true?'gou':'cha'}}.png"></image>
+        </view>
+        <view class="item">
+            <view class="left">
+                <text>D</text>
+                干垃圾
+            </view>
+            <image class="icon-right" src="/images/icon-{{true?'gou':'cha'}}.png"></image>
+        </view>
+    </view>
+</view>
+
+<view class="all-answer">
+    <view class="you">你的答案：<text>B</text></view>
+    <view class="right">正确答案：<text>A</text></view>
+</view>
+
+<button class="confirm-btn">确定</button>
+
+<view class="description">
+    <view class="title">测试说明：</view>
+    <view class="desc">
+        所有题目分多套测试，做对一道加一分，做错不扣分，坚持做完一套额外加5分（不管做什么，都要坚持）；
+    </view>
+    <view class="desc">
+        PS：人生的选择有很多，有些选择你知道对错，有些选择你不知道对错，你也可以随意，但是选择后就不能再回头；没有人会告诉你正确答案，也没有人会去帮你选择，需要你自己去思考；
+    </view>
+    <view class="desc">
+        坚持对人生很重要，坚持的结果往往比你想象的好很多；
+    </view>
+</view>

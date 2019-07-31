@@ -28,7 +28,6 @@ App({
           success: res => {
             console.log('[云函数] [login] user openid: ', JSON.stringify(res))
             this.globalData.openid = res.result.openid
-            console.log(this.globalData)
             // wx.navigateTo({
             //   url: '../userConsole/userConsole',
             // })
@@ -52,7 +51,6 @@ App({
             success: res => {
               // 可以将 res 发送给后台解码出 unionId
               this.globalData.userInfo = res.userInfo
-              console.log(this.globalData)
 
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
               // 所以此处加入 callback 以防止这种情况

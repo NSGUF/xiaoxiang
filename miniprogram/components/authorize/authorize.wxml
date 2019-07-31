@@ -1,0 +1,10 @@
+<view class='dialog-container' wx:if="{{isShow}}">
+    <view class='dialog-mask'></view>
+    <cover-view class='dialog-info'>
+        <cover-view class='dialog-title'>{{ title || "需要您的授权" }}</cover-view>
+        <cover-view class='dialog-content'>{{ content || "为了提供更好的服务，请在稍后的提示框中点击“允许”" }}</cover-view>
+        <cover-view class='dialog-footer'>
+          <button class='dialog-btn' open-type="getUserInfo" bindgetuserinfo='setUserInfo' binderrror='bindError'>{{ confirmText||"我知道了" }}</button>
+        </cover-view>
+    </cover-view>
+</view>
