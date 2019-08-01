@@ -74,12 +74,12 @@
   visibility: visible;
 }
 
-.examine .answer .error {
+.examine .answer .wrong {
   border: 1rpx solid #f7dbda;
   background: #f9e5e3;
 }
 
-.examine .answer .error .icon-right {
+.examine .answer .wrong .icon-right {
   visibility: visible;
 }
 

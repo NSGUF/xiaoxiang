@@ -1,5 +1,5 @@
 import * as enums from '../../utils/enums'
-
+import {showTip} from '../../utils/util.js'
 
 Page({
 
@@ -7,13 +7,20 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    examineArr: [],// 当前做的题的数组
+    index: 0,//用户伦到哪道题
+    examine: {},//当前题目信息,
+    sortInfo: [],// 答案信息，数组
+    chooseAnswer: null,//用户选择的结果
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.showLoading({
+      title: '正在加载...',
+    })
     if (options.examineTypes) {
       const examineTypes = parseInt(options.examineTypes)
       switch(examineTypes) {
@@ -24,6 +31,13 @@ Page({
               data: {},
               success: res => {
                 console.log(res)
+                const data = res.result.data
+                this.setData({
+                  examineArr: data.randomExamine,
+                  examine: data.randomExamine[this.data.index],
+                  sortInfo: data.sortInfo,
+                })
+                wx.hideLoading()
               },
               fail: res => {
                 console.log(res)
@@ -85,5 +99,36 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  chooseAnswer: function (e) {
+    this.setData({
+      chooseAnswer: e.currentTarget.dataset.answer,
+
+    }, () => {
+      console.log(this.data)
+    })
+    // 获取正确结果的编号
+    this.data.sortInfo.map(item => {
+      if (item._id == this.data.examine.sortId) {
+        const examine = this.data.examine
+        examine.examineIndex = item.examineIndex
+        this.setData({
+          examine
+        })
+      }
+    })
+
+    // TODO 上传数据
+  },
+  nextExamine: function () {
+    if (this.data.index < this.data.examineArr.length) {
+      this.setData({
+        examine: this.data.examineArr[++this.data.index],
+        chooseAnswer: null,//用户选择的结果
+      })
+    } else {
+      showTip('恭喜您刷完该套题目，额外会加10积分到您的账户上噢~') // TODO 改弹框
+      wx.navigateBack(-1)
+    }
   }
 })
