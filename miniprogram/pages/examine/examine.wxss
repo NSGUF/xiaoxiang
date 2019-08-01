@@ -5,6 +5,7 @@
   box-shadow: 0 2rpx 10rpx #fff;
   padding-bottom: 40rpx;
   padding-top: 90rpx;
+  min-height: 600rpx;
 }
 
 .examine .question {

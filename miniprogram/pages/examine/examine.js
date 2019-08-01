@@ -128,7 +128,9 @@ Page({
       })
     } else {
       showTip('恭喜您刷完该套题目，额外会加10积分到您的账户上噢~') // TODO 改弹框
-      wx.navigateBack(-1)
+      setTimeout(() => {
+        wx.navigateBack(-1)
+      }, 2000)
     }
   }
 })
