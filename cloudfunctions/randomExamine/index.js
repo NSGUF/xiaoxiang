@@ -8,7 +8,8 @@ exports.main = async(event, context) => {
   try {
     const db = cloud.database()
     const openId = event.userInfo.openId
-    // 获取当前用户已经做过的题目列表
+    // 首先获取当前用户已经做过的题目列表，再与总数据取差集，再从差集中随机去出题目数据集
+
     const doneExamine = await db.collection('user').where({
       openId
     }).field({
@@ -16,20 +17,28 @@ exports.main = async(event, context) => {
     }).get()
     const doneExamineArr = doneExamine.data[0].doneExamine
 
+
     // 获取用户没做过的题目
     const _ = db.command
-    const totalExamine = await db.collection('product').where({
-      id: _.nin(doneExamineArr)
-    }).get()
-    const totalExamineArr = totalExamine.data
+    const totalExamine = await db.collection('product').count()
+    const totalArr = getArrayByLength(totalExamine.total)
+
+    const diffSetExamine = diffSet(totalArr, doneExamineArr)
+
+
     // 随机取20题
-    let randomExamine = []
-    if (totalExamineArr.length <= 20) {
-      randomExamine = totalExamineArr
+    let randomExamineIndexs = []
+    if (diffSetExamine.length <= 20) {
+      randomExamineIndexs = diffSetExamine
     } else {
-      randomExamine = getTwentyRArr(totalExamineArr, 20)
+      randomExamineIndexs = getTwentyRArr(diffSetExamine, 20)
     }
-    console.log('randomExamine:', randomExamine)
+    console.log('randomExamine:', randomExamineIndexs)
+
+    const randomExamine = await db.collection('product').where({
+      id: _.in(randomExamineIndexs)
+    }).get()
+
 
     // 获取分类信息
     const sortInfoCol = await db.collection('sort').get()
@@ -57,3 +66,28 @@ const getTwentyRArr = (allArr, length) => {
   }
   return arr
 }
+
+const getArrayByLength = (length) => {
+  const arr = []
+  for(let i = 1; i <= length; i++) {
+    arr.push(i)
+  }
+
+  return arr
+}
+
+
+// 差集
+const diffSet = function (father, child) {
+  var fatherSet = new Set(father);
+  var childSet = new Set(child);
+
+  var subset = [];
+  for (let item of fatherSet) {
+    if (!childSet.has(item)) {
+      subset.push(item);
+    }
+  }
+
+  return subset;
+};
