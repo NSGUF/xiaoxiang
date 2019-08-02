@@ -7,10 +7,10 @@ Page({
   data: {
     quickInputResult: '',
     types: [
-      "/images/RecycleableWaste.jpg",
-      "/images/HazardouAwaste.jpg",
-      "/images/HouseholdfoodWaste.jpg",
-      "/images/ResidualWaste.png",
+      "/images/icon-khs.png",
+      "/images/icon-yh.png",
+      "/images/icon-s.png",
+      "/images/icon-g.png",
     ]
   },
 

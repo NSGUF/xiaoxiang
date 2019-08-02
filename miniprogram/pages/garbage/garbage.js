@@ -11,7 +11,7 @@ Page({
     sorts:[{
       color:"#664035",
       bgcolor: "#d6d5d4",
-      logo:"/images/HouseholdfoodWaste.jpg",
+      logo:"/images/icon-s.png",
       name:"湿垃圾",
       content: "日常生活垃圾产生的容易腐烂的生物质废弃物",
       desc: "剩菜剩饭、瓜皮果核、花卉绿植、过期食品等",
@@ -19,7 +19,7 @@ Page({
     },{
       color: "#2c2b27",
       bgcolor: "#e9e8e6",
-      logo: "/images/ResidualWaste.png",
+      logo: "/images/icon-g.png",
       name: "干垃圾",
       content: "除有害垃圾、湿垃圾、可回收物以外的其他生活废弃物",
       desc: "餐盒、餐巾纸、湿纸巾、卫生间用纸、塑料袋、 食品包装袋、污染严重的纸、烟蒂、纸尿裤、 一次性杯子、大骨头、贝壳、花盆、陶瓷等",
@@ -28,7 +28,7 @@ Page({
     },{
       color: "#e73322",
       bgcolor: "#c8e2f8",
-      logo: "/images/HazardouAwaste.jpg",
+      logo: "/images/icon-yh.png",
       name: "有害垃圾",
       content: "对人体健康或者自然环境造成直接或潜在危害的废弃物",
       desc: "废电池、油漆桶、荧光灯管、废药品及其包装物等",
@@ -36,7 +36,7 @@ Page({
     },{
       color: "#014782",
       bgcolor: "#e9e8e6",
-      logo: "/images/RecycleableWaste.jpg",
+      logo: "/images/icon-khs.png",
       name: "可回收物",
       content: "适宜回收利用和资源化利 用的，如：玻、金、塑、 纸、衣",
       desc: "酱油瓶、玻璃杯、平板玻璃、易拉罐、饮料瓶、 洗发水瓶、塑料玩具、书本、报纸、广告单、 纸板箱、衣服、床上用品等",

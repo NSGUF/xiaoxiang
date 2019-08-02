@@ -1,44 +1,40 @@
 <view class="search-container">
-    <view class='find-input'>
-        <image class="icon-search" src='/images/icon_search.png'></image>
-        <input focus="{{true}}" confirm-type="done" class="input-search" bindconfirm="quickFind"
-               bindinput="quickInputResult"
-               value="{{keyword}}" placeholder='请输入您想要搜索的关键字' placeholder-style='color:#999999;'/>
-        <image class="icon_camera" bind:tap="toCamera" src='/images/icon_camera.png'></image>
-    </view>
-    <button class="search-btn" bind:tap="search">搜索</button>
+  <view class='find-input'>
+    <image class="icon-search" src='/images/icon_search.png'></image>
+    <input focus="{{true}}" confirm-type="done" class="input-search" bindconfirm="quickFind" bindinput="quickInputResult" value="{{keyword}}" placeholder='请输入您想要搜索的关键字' placeholder-style='color:#999999;' />
+    <image class="icon_camera" bind:tap="toCamera" src='/images/icon_camera.png'></image>
+  </view>
+  <button class="search-btn" bind:tap="search">搜索</button>
 </view>
-<block wx:if="{{datas.length>0}}">
-    <view class="filter-view" wx:for="{{datas}}" wx:key bindtap="onItemClick" data-index="{{index}}">
-        <view class="item">
-            <view class="info">
-                <image wx:if="{{item.sortId==1}}" class="type-img" src='/images/RecycleableWaste.jpg'></image>
-                <image wx:elif="{{item.sortId==2}}" class="type-img" src='/images/HazardouAwaste.jpg'></image>
-                <image wx:elif="{{item.sortId==3}}" class="type-img" src='/images/HouseholdfoodWaste.jpg'></image>
-                <image wx:else="{{item.sortId==4}}" class="type-img" src='/images/ResidualWaste.png'></image>
-                {{item.name}}
-            </view>
-            <image class="icon-right" src="/images/icon-right.png"></image>
-        </view>
+<block wx:if="{{!isEmpty}}">
+  <view class="filter-view" wx:for="{{datas}}" wx:key bindtap="onItemClick" data-index="{{index}}">
+    <view class="item">
+      <view class="info">
+        <image wx:if="{{item.sortId==1}}" class="type-img" src='/images/icon-khs.png'></image>
+        <image wx:elif="{{item.sortId==2}}" class="type-img" src='/images/icon-yh.png'></image>
+        <image wx:elif="{{item.sortId==3}}" class="type-img" src='/images/icon-s.png'></image>
+        <image wx:else="{{item.sortId==4}}" class="type-img" src='/images/icon-g.png'></image>
+        {{item.name}}
+      </view>
+      <image class="icon-right" src="/images/icon-right.png"></image>
     </view>
+  </view>
 </block>
-
-
 <block wx:else>
-    <view class='fail-info'>
-        <image class='status-img' src='https://mimg.shouhoubang.com/images/seller/img-rzshsb.png' />
-        <view class='fail-tip'>很遗憾，未找到相关内容</view>
-        <view class='service-info'>
-            <view class='service-info-tip'>
-                若您帮我们完善垃圾样本信息，我们将会感谢您的贡献，
-            </view>
-            <view class='service-info-tip'>
-                并会发放对应积分到您的账户噢~
-            </view>
-        </view>
-        <view class="btn-view">
-            <view class="btn-commit" bindtap="onGoHome"> 返回首页</view>
-            <view class="btn-commit" bindtap="commit">提交信息</view>
-        </view>
+  <view class='fail-info'>
+    <image class='status-img' src='https://mimg.shouhoubang.com/images/seller/img-rzshsb.png' />
+    <view class='fail-tip'>很遗憾，未找到相关内容</view>
+    <view class='service-info'>
+      <view class='service-info-tip'>
+        若您帮我们完善垃圾样本信息，我们将会感谢您的贡献，
+      </view>
+      <view class='service-info-tip'>
+        并会发放对应积分到您的账户噢~
+      </view>
     </view>
+    <view class="btn-view">
+      <view class="btn-commit" bindtap="onGoHome"> 返回首页</view>
+      <view class="btn-commit" bindtap="commit">提交信息</view>
+    </view>
+  </view>
 </block>
