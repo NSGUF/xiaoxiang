@@ -31,17 +31,21 @@ exports.main = async(event, context) => {
     if (diffSetExamine.length <= 20) {
       randomExamineIndexs = diffSetExamine
     } else {
-      randomExamineIndexs = getTwentyRArr(diffSetExamine, 20)
+      randomExamineIndexs = getRandomArr(diffSetExamine, 4)
     }
     console.log('randomExamine:', randomExamineIndexs)
 
-    const randomExamine = await db.collection('product').where({
+    let randomExamine = await db.collection('product').where({
       id: _.in(randomExamineIndexs)
     }).get()
 
 
+    randomExamine = randomExamine.data.sort(() => {
+      return Math.random() - 0.5
+    })
+
     // 获取分类信息
-    const sortInfoCol = await db.collection('sort').get()
+    const sortInfoCol = await db.collection('classify').get()
     const sortInfo = sortInfoCol.data
 
     return {
@@ -58,7 +62,7 @@ exports.main = async(event, context) => {
   }
 }
 
-const getTwentyRArr = (allArr, length) => {
+const getRandomArr = (allArr, length) => {
   const arr = []
   for (let i = 0; i < length; i++) {
     let index = Math.floor(Math.random() * allArr.length)

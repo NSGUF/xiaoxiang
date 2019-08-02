@@ -112,7 +112,7 @@ Page({
     })
     // 获取正确结果的编号
     this.data.sortInfo.map(item => {
-      if (item._id == this.data.examine.sortId) {
+      if (item.id == this.data.examine.sortId) {
         const examine = this.data.examine
         examine.examineIndex = item.examineIndex
         this.setData({
@@ -120,10 +120,33 @@ Page({
         })
       }
     })
+    let result = this.data.examine.sortId === e.currentTarget.dataset.answer.id
+    console.info(result)
+    console.info(this.data.index === (this.data.examineArr.length - 1))
     // TODO 上传数据
+    const userAnswer = {
+      examineId: this.data.examine.id,
+      result,
+      isLast: this.data.index === (this.data.examineArr.length - 1)
+    }
+
+    wx.cloud.callFunction({
+      name: 'updateExamineResult',
+      data: {
+        userAnswer
+      },
+      success: res => {
+        console.log(res)
+      },
+      fail: res => {
+        console.log(res)
+      }
+    })
   },
   nextExamine: function() {
-    if (this.data.index < this.data.examineArr.length) {
+    console.log(this.data.index)
+    console.log(this.data.examineArr.length)
+    if (this.data.index < this.data.examineArr.length - 1) {
       this.setData({
         examine: this.data.examineArr[++this.data.index],
         chooseAnswer: null, //用户选择的结果

@@ -28,6 +28,7 @@ exports.main = async(event, context) => {
           userDesc,
           integral: 0, //积分
           doneExamine: [], //做过的题目ID集合
+          doneResult: [],//用户做过题的结果
         }
       })
       return {

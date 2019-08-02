@@ -8,11 +8,11 @@
   </view>
   <view class="answer">
     <view wx:for="{{sortInfo}}" bind:tap="chooseAnswer" data-answer="{{item}}" wx:key='{{index}}'
-    class="item {{!chooseAnswer?'':item._id==examine.sortId?'right':item._id==chooseAnswer._id?'wrong':''}} ">
+    class="item {{!chooseAnswer?'':item.id==examine.sortId?'right':item.id==chooseAnswer.id?'wrong':''}} ">
       <view class="left">
         <text>{{item.examineIndex}}</text> {{item.name}}
       </view>
-      <image class="icon-right" src="/images/icon-{{item._id==examine.sortId?'gou':'cha'}}.png"></image>
+      <image class="icon-right" src="/images/icon-{{item.id==examine.sortId?'gou':'cha'}}.png"></image>
     </view>
   </view>
 </view>
