@@ -1,4 +1,3 @@
-
 <view class="subject">
     <view class="title">
         进阶篇
@@ -9,7 +8,7 @@
             <view class="mask"></view>
             <image class="bg-img" src="/images/examine-bg1.jpg"></image>
             <view class="tip">涵盖所有题目</view>
-            <view class="number">共32题 未做题</view>
+            <view class="number">共{{productTotal}}题 未做{{doneExamineLength}}题</view>
             <view class="btn">开始测试</view>
         </view>
     </view>

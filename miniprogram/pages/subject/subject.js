@@ -19,7 +19,9 @@ Page({
       success: res => {
         console.log(res)
         this.setData({
-          examineList: res.result.examineList
+          productTotal: res.result.productTotal,
+          doneExamineLength: res.result.doneExamineLength,
+          examineList: res.result.examineList,
         })
       },
       fail: res => {

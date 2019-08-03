@@ -6,30 +6,35 @@ cloud.init()
 // 云函数入口函数
 exports.main = async (event, context) => {
   try {
-    const openId = event.userInfo.openId
     const db = cloud.database()
-
-    const doneExamineCol = await db.collection('user').where({
-      openId
-    }).count()
-    const doneExamineTotal = doneExamineCol.total
-
-    const doneExamineCol = await db.collection('user').where({
-      openId
-    }).count()
-    const doneExamineTotal = doneExamineCol.total
-
     const examineListCol = await db.collection('examineCollection').field({
       title: true
     }).get()
     console.log(examineListCol)
 
-
     const examineList = examineListCol.data
     console.log(examineList)
+
+    const productCol = await db.collection('product').count()
+    const productTotal = productCol.total
+
+    const doneExamineCol = await db.collection('user').where({
+      openId
+    }).field({
+      doneExamine: true
+    }).get()
+
+    const doneExamine = doneExamineCol.data[0]
+
+    console.log(doneExamine)
+
     return {
       error: 0,
-      examineList,
+      data: {
+        productTotal,
+        doneExamineLength: doneExamine.length,
+        examineList,
+      }
     }
 
   } catch (e) {
