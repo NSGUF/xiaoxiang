@@ -46,7 +46,7 @@ exports.main = async(event, context) => {
   } catch (e) {
     return {
       error: 1,
-      msg: '失败',
+      msg: '系统异常'
     }
   }
 }

@@ -54,5 +54,9 @@ exports.main = async(event, context) => {
     }
   } catch (e) {
     console.log(e)
+    return {
+      error: 1,
+      msg: '系统异常'
+    }
   }
 }

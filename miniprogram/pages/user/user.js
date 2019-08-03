@@ -9,43 +9,79 @@ Page({
   data: {
     grade: '菜鸟',
     number: '0',
-    userInfo: {},
+    user: {},
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo
-      })
-    } else if (wx.canIUse('button.open-type.getUserInfo')) {
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo
+    // if (app.globalData.userInfo) {
+    //   this.setData({
+    //     userInfo: app.globalData.userInfo
+    //   })
+    // } else if (wx.canIUse('button.open-type.getUserInfo')) {
+    //   // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+    //   // 所以此处加入 callback 以防止这种情况
+    //   app.userInfoReadyCallback = res => {
+    //     this.setData({
+    //       userInfo: res.userInfo
+    //     })
+    //   }
+    // } else {
+    //   // 在没有 open-type=getUserInfo 版本的兼容处理
+    //   wx.getUserInfo({
+    //     success: res => {
+    //       app.globalData.userInfo = res.userInfo
+    //       this.setData({
+    //         userInfo: res.userInfo
+    //       })
+    //       console.log(app.globalData)
+    //     }
+    //   })
+    // }
+    // wx.cloud.callFunction({
+    //   name: 'user',
+    //   success: res => {
+    //     console.log(res)
+    //   },
+    //   fail: res => {
+    //     console.log(res)
+    //   }
+    // })
+  },
+  updateUser: function () {
+    // 登录
+    wx.login({
+      success: res => {
+        // 调用云函数
+        wx.cloud.callFunction({
+          name: 'login',
+          data: {},
+          success: res => {
+            console.log('获取用户信息: ', res)
+            app.globalData.user = res.result.data
+            // wx.navigateTo({
+            //   url: '../userConsole/userConsole',
+            // })
+            this.setData({
+              ...res.result.data
+            }, () => {
+              console.log(this.data)
+            })
+          },
+          fail: err => {
+            console.error('[云函数] [login] 调用失败', err)
+            // wx.navigateTo({
+            //   url: '../deployFunctions/deployFunctions',
+            // })
+          }
         })
       }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo
-          })
-          console.log(app.globalData)
-        }
-      })
-    }
+    })
   },
   getUserInfo: function (e) {
     app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo
-    })
     wx.cloud.callFunction({
       name: 'updateUserDesc',
       data: {
@@ -57,6 +93,7 @@ Page({
         console.log(res)
       }
     })
+    this.updateUser()
   },
 
   /**
@@ -70,6 +107,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    this.updateUser()
 
   },
 
