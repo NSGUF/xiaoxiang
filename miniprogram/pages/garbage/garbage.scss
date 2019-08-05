@@ -1,0 +1,62 @@
+
+.garbage {
+  padding-bottom: 50rpx;
+
+    .title {
+      font-size: 42rpx;
+      text-align: center;
+      font-weight: bold;
+      width: 100%;
+      color: #fff;
+      padding-top: 20rpx;
+      margin-bottom: 50rpx;
+    }
+
+    .garbage-container {
+      background: #dcf0e8;
+      box-shadow: 0 10rpx 40rpx 0 rgba(10, 113, 238, 0.2);
+      border-radius: 20rpx;
+      width: 710rpx;
+      margin: auto;
+      padding-top: 40rpx;
+      padding-bottom: 60rpx;
+      .header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo {
+          width: 200rpx;
+          height: 200rpx;
+          margin-left: 40rpx;
+
+        }
+
+        .header-text {
+          width: 405rpx;
+          font-size: 36rpx;
+          margin-right: 40rpx;
+          line-height: 50rpx;
+
+        }
+      }
+
+      .types {
+        width: 630rpx;
+        margin: auto;
+        .item {
+          background: #fff;
+          border-radius: 20rpx;
+          color: #07b280;
+          font-size: 36rpx;
+          margin-top: 30rpx;
+          box-sizing: border-box;
+          padding: 20rpx;
+        }
+      }
+    }
+}
+
+page {
+  background: #07b280;
+}

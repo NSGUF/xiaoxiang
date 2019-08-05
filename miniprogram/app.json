@@ -42,6 +42,7 @@
   "usingComponents": {
     "share": "/components/share/share",
     "authorize": "/components/authorize/authorize",
+    "declaration": "/components/declaration/declaration",
     "modal": "/components/modal/modal"
   }
 }

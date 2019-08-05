@@ -9,3 +9,6 @@
 </view>
 
 <modal bind:chooseItem="chooseItem" isShowModal="{{isShowModal}}" items="{{results}}"/>
+
+
+<share/>

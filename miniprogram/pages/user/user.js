@@ -1,4 +1,3 @@
-
 //获取应用实例
 const app = getApp()
 Page({
@@ -7,145 +6,136 @@ Page({
    * 页面的初始数据
    */
   data: {
-    grade: '菜鸟',
-    number: '0',
-    user: {},
+    grade: '九品分类师',//九品分类师  
+    user: { integral:0},
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    // if (app.globalData.userInfo) {
-    //   this.setData({
-    //     userInfo: app.globalData.userInfo
-    //   })
-    // } else if (wx.canIUse('button.open-type.getUserInfo')) {
-    //   // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-    //   // 所以此处加入 callback 以防止这种情况
-    //   app.userInfoReadyCallback = res => {
-    //     this.setData({
-    //       userInfo: res.userInfo
-    //     })
-    //   }
-    // } else {
-    //   // 在没有 open-type=getUserInfo 版本的兼容处理
-    //   wx.getUserInfo({
-    //     success: res => {
-    //       app.globalData.userInfo = res.userInfo
-    //       this.setData({
-    //         userInfo: res.userInfo
-    //       })
-    //       console.log(app.globalData)
-    //     }
-    //   })
-    // }
-    // wx.cloud.callFunction({
-    //   name: 'user',
-    //   success: res => {
-    //     console.log(res)
-    //   },
-    //   fail: res => {
-    //     console.log(res)
-    //   }
-    // })
+  onLoad: function(options) {
+    if (app.globalData.openId) {
+      this.setData({
+        openId: app.globalData.openId
+      })
+    }
   },
-  updateUser: function () {
-    // 登录
-    wx.login({
-      success: res => {
-        // 调用云函数
-        wx.cloud.callFunction({
-          name: 'login',
-          data: {},
-          success: res => {
-            console.log('获取用户信息: ', res)
-            app.globalData.user = res.result.data
-            // wx.navigateTo({
-            //   url: '../userConsole/userConsole',
-            // })
-            this.setData({
-              ...res.result.data
-            }, () => {
-              console.log(this.data)
-            })
-          },
-          fail: err => {
-            console.error('[云函数] [login] 调用失败', err)
-            // wx.navigateTo({
-            //   url: '../deployFunctions/deployFunctions',
-            // })
+  updateUser: function() {
+    // if (!app.globalData.user) {
+    //   return
+    // }
+    try{
+      console.log(app.globalData.openId)
+    const db = wx.cloud.database()
+    db.collection('user').where({
+      openId: app.globalData.openId
+    }).field({
+      integral: true,
+      openId: true,
+      userDesc: true,
+    }).get().then(res => {
+      // console.log(res.data[0])
+      this.setData({
+        user: res.data[0]
+      })
+      app.globalData.user = res.data[0]
+        })
+    }catch(e){
+      console.log(e)
+    }
+  },
+  getUserInfo: function(e) {
+    app.globalData.userInfo = e.detail.userInfo
+    this.isExistUser().then((res) => {
+    }).then(res => {
+      this.updateUser()
+    })
+  },
+  isExistUser: function() {
+    return new Promise((resove, reject) => {
+      const userCount = wx.cloud.database().collection('user').where({
+        openId: app.globalData.openId // 填入当前用户 openId
+      }).count().then(res => {
+        console.log(res)
+        const total = res.total
+        if (total === 0) {
+          resove()
+          this.addUser()
+        } else {
+          console.log('已经存在')
+          this.updateUser()
+        }
+      })
+    })
+  },
+  addUser: function() {
+    return new Promise((resove, reject) => {
+      try {
+        wx.cloud.database().collection('user').add({
+          data: {
+            openId: app.globalData.openId,
+            userDesc: app.globalData.userInfo,
+            grade:'九品分类师',
+            integral: 0, //积分
+            doneExamine: [], //做过的题目ID集合
+            doneResult: [], //用户做过题的结果
           }
         })
+      } catch (e) {
+        console.log(e)
       }
     })
-  },
-  getUserInfo: function (e) {
-    app.globalData.userInfo = e.detail.userInfo
-    wx.cloud.callFunction({
-      name: 'updateUserDesc',
-      data: {
-        userDesc: app.globalData.userInfo,
-      },
-      success: res => {
-      },
-      fail: res => {
-        console.log(res)
-      }
-    })
-    this.updateUser()
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
     this.updateUser()
-
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   },
-  toPage: function (e) {
+  toPage: function(e) {
     wx.navigateTo({
       url: e.currentTarget.dataset.url
     })

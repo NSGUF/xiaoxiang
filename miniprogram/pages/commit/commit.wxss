@@ -7,7 +7,7 @@
   width: 100%;
   height: 420rpx;
   font-size: 30rpx;
-  color: #aaa;
+  color: #3e3d53;
   padding-top: 30rpx;
   padding-left: 30rpx;
   margin-top: 20rpx;
@@ -41,7 +41,7 @@
 .commit .form-view .commit-type .result {
   display: flex;
   font-size: 32rpx;
-  color: #666666;
+  color: #3e3d53;
   align-items: center;
 }
 

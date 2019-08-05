@@ -4,11 +4,11 @@
     </view>
 
     <view class="container">
-        <view class="item" bind:tap="toDoExamine">
+        <view class="item" bind:tap="toDoExamine" data-id='all'>
             <view class="mask"></view>
             <image class="bg-img" src="/images/examine-bg1.jpg"></image>
             <view class="tip">涵盖所有题目</view>
-            <view class="number">共{{productTotal}}题 未做{{doneExamineLength}}题</view>
+            <view class="number">共{{productTotal}}题 已做{{doneExamineLength}}题</view>
             <view class="btn">开始测试</view>
         </view>
     </view>
@@ -16,11 +16,11 @@
         趣味篇
     </view>
     <view class="container">
-        <view class="item" bind:tap="toDoExamine" data-id="{{item._id}}" wx:for="{{examineList}}">
+        <view class="item" bind:tap="toDoExamine" data-id="{{item._id}}" wx:for="{{examineList}}" wx:key="{{index}}">
             <view class="mask"></view>
-            <image class="bg-img" src="/images/examine-bg1.jpg"></image>
+            <image class="bg-img" src="/images/examine-bg{{index+2}}.jpg"></image>
             <view class="tip">{{item.title}}</view>
-            <view class="number">共{{examineList.length}}题</view>
+            <view class="number">共{{item.collection.length}}题</view>
             <view class="btn">开始测试</view>
         </view>
     </view>

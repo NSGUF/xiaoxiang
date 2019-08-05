@@ -12,7 +12,7 @@
     display: flex;
     align-items: center;
     background: #fff;
-    box-shadow:0 8rpx 60rpx 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8rpx 60rpx 0 rgba(0, 0, 0, 0.08);
 
     .icon-search {
       width: 40rpx;
@@ -20,6 +20,7 @@
       margin-left: 15rpx;
       margin-right: 15rpx;
     }
+
     .icon_camera {
       width: 45rpx;
       height: 45rpx;
@@ -29,34 +30,48 @@
 
     .input-search {
       height: 34rpx;
-      color: #999;
+      color: #3e3d53;
       white-space: nowrap;
       width: 515rpx;
       font-size: 30rpx;
       overflow: hidden;
-      text-overflow:ellipsis;
+      text-overflow: ellipsis;
     }
 
   }
 
   .main {
-    padding-top: 150rpx;
-    width: 600rpx;
-    padding-left: 50rpx;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-content: flex-start;
-    .type {
-      margin-right: 50rpx;
-      width: 250rpx;
+    padding-top: 50rpx;
+    width: 650rpx;
+
+    .item {
+      width: 650rpx;
       height: 250rpx;
-      border-radius: 30rpx;
-      margin-bottom: 50rpx;
+      margin-bottom: 30rpx;
+      background: #fff;
+      box-shadow: 0 10rpx 40rpx 0 rgba(10, 113, 238, 0.1);
+      border-radius: 10rpx;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .type {
+        width: 180rpx;
+        height: 180rpx;
+        border-radius: 30rpx;
+        margin-right: 20rpx;
+      }
+
+      .text {
+        width: 400rpx;
+        font-size: 32rpx;
+
+      }
     }
   }
 
 }
-page{
+
+page {
 
 }

@@ -31,7 +31,7 @@
 
 .container .find-input .input-search {
   height: 34rpx;
-  color: #999;
+  color: #3e3d53;
   white-space: nowrap;
   width: 515rpx;
   font-size: 30rpx;
@@ -40,19 +40,30 @@
 }
 
 .container .main {
-  padding-top: 150rpx;
-  width: 600rpx;
-  padding-left: 50rpx;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-content: flex-start;
+  padding-top: 50rpx;
+  width: 650rpx;
 }
 
-.container .main .type {
-  margin-right: 50rpx;
-  width: 250rpx;
+.container .main .item {
+  width: 650rpx;
   height: 250rpx;
+  margin-bottom: 30rpx;
+  background: #fff;
+  box-shadow: 0 10rpx 40rpx 0 rgba(10, 113, 238, 0.1);
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .main .item .type {
+  width: 180rpx;
+  height: 180rpx;
   border-radius: 30rpx;
-  margin-bottom: 50rpx;
+  margin-right: 20rpx;
+}
+
+.container .main .item .text {
+  width: 400rpx;
+  font-size: 32rpx;
 }

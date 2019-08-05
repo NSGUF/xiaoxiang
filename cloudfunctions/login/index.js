@@ -13,34 +13,22 @@ cloud.init()
  *
  */
 exports.main = async(event, context) => {
-    try {
-        const openId = event.userInfo.openId
+  try {
+    const openId = event.userInfo.openId
+   
 
-        const db = cloud.database()
-
-        const users = await db.collection('user').where({
-            openId
-        }).field({
-            integral: true,
-            openId: true,
-            userDesc: true,
-        }).get()
-        const user = users.data[0]
-        console.log(users)
-
-        return {
-            data:{
-                user,
-                openId,
-            },
-            error: 0,
-        }
-    } catch (e) {
-        console.log(e)
-        return {
-            error: 1,
-            msg: '系统异常'
-        }
+    return {
+      data: {
+        openId
+      },
+      error: 0,
     }
+  } catch (e) {
+    console.log(e)
+    return {
+      error: 1,
+      msg: '系统异常'
+    }
+  }
 
 }

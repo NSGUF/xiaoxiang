@@ -1,6 +1,6 @@
 const examineTypes = {
   advanced: 0, // 进阶篇
-  animal: 1, // 动物篇
+  interesting: 1, // 趣味篇
 }
 
 const answerStatus = {

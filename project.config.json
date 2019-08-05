@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 5,
 			"list": [
 				{
 					"id": 0,
@@ -71,9 +71,9 @@
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "pages/subject/subject",
-					"pathName": "pages/subject/subject",
+					"id": 5,
+					"name": "pages/garbage/garbage",
+					"pathName": "pages/garbage/garbage",
 					"query": "",
 					"scene": null
 				}

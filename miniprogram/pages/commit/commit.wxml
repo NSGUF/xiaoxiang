@@ -3,7 +3,7 @@
         <view class="commit-type" bind:tap="showModal">
             <view class="info">
                 <image class="icon-more" src="/images/icon-more.png"></image>
-                垃圾分类
+                垃圾类别
             </view>
             <view class="result">
                 {{typeInfo}}
@@ -18,4 +18,6 @@
         </button>
     </form>
 </view>
+
+<share/>
 <modal bind:chooseItem="chooseItem" isShowModal="{{isShowModal}}" items="{{sorts}}"/>

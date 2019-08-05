@@ -9,6 +9,7 @@ exports.main = async(event, context) => {
     const wxContext = cloud.getWXContext()
     const db = cloud.database()
     const userAnswer = event.userAnswer
+    const isInteresting = event.isInteresting
     const openId = event.userInfo.openId
 
     const doneExamineCol = await db.collection('user').where({
@@ -36,8 +37,10 @@ exports.main = async(event, context) => {
       if (userAnswer.result) {
         integral++
       }
-      if (userAnswer.isLast) {
-        integral += 10
+      if (isInteresting) {
+        if (userAnswer.isLast) {
+          integral += 10
+        }
       }
 
       await db.collection('user').where({openId}).update({

@@ -87,6 +87,9 @@ Page({
         this.setData({
             isCommiting: true
         })
+        wx.showLoading({
+          title: '正在提交',
+        })
 
         db.collection('commit').add({
             data: {

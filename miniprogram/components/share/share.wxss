@@ -1,7 +1,7 @@
 .share {
   position: fixed;
   right: 20rpx;
-  bottom: 40rpx;
+  bottom: 80rpx;
   z-index: 1;
 }
 

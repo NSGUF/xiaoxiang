@@ -10,10 +10,11 @@ page{
     margin-top: 60rpx;
     font-size: 36rpx;
     line-height: 36rpx;
-    color: #3e3d53;
+    font-weight: bold;
+    color: #000;
     display: block;
     padding-left: 40rpx;
-    margin-bottom: 20rpx;
+    margin-bottom: 0rpx;
 
   }
 
@@ -31,7 +32,6 @@ page{
         border-radius: 16rpx;
         height: 280rpx;
         width: 690rpx;
-        filter: blur(1rpx);
       }
       .mask {
         border-radius: 16rpx;
@@ -40,7 +40,7 @@ page{
         right: 0;
         top: 0;
         bottom: 0;
-        background: rgba(0,0,0, 0.2);
+        background: rgba(0,0,0, 0.4);
         z-index: 1;
       }
 

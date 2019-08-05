@@ -7,13 +7,14 @@ cloud.init()
 exports.main = async (event, context) => {
   try {
     const db = cloud.database()
+    const openId = event.userInfo.openId
+    
     const examineListCol = await db.collection('examineCollection').field({
-      title: true
+      title: true,
+      collection: true,
     }).get()
     console.log(examineListCol)
-
     const examineList = examineListCol.data
-    console.log(examineList)
 
     const productCol = await db.collection('product').count()
     const productTotal = productCol.total
@@ -24,7 +25,7 @@ exports.main = async (event, context) => {
       doneExamine: true
     }).get()
 
-    const doneExamine = doneExamineCol.data[0]
+    const doneExamine = doneExamineCol.data[0].doneExamine
 
     console.log(doneExamine)
 
