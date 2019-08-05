@@ -10,18 +10,16 @@
 
 - [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
 
-# 取不到数据
-1. 数据库可能没开权限
 
 测试：
 猫砂篇；
 
 # 数据库设计
+classify：垃圾类别信息
 commit：用户帮忙上传的数据库里没有的垃圾信息  
-product：所有的垃圾信息  
-sort：垃圾种类信息  
+product：所有的垃圾信息 
+examineCollection： 趣味测试题
 user：用户基本信息
-integral：积分数
 
 
 ## 致力于最简洁的设计，最优雅的代码，最快的速度；若有哪里可以改进可以给我提issues；
@@ -34,6 +32,6 @@ integral：积分数
 
 
 # 遇到的问题
-* 前端操作取不到数据
+* 前端操作取不到数据（数据库可能没开权限）
 > 操作如下: 云开发->数据库->选中对应的数据集->权限设置->所有用户可读写
 * 前端操作单个update,doc传的是_id
