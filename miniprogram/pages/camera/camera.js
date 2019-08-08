@@ -10,7 +10,7 @@ Page({
    */
   data: {
     accessToken: "",
-    results: [{"score": 0.685739, "root": "人物-人物特写", "keyword": "人物特写"}, {"score": 0.471074, "root": "人物活动-人物特写", "keyword": "男孩"}, {"score": 0.322971, "root": "人物-人物特写", "keyword": "人脸"}, {"score": 0.165124, "root": "商品-眼镜", "keyword": "太阳镜"}, {"score": 0.017557, "root": "商品-眼镜", "keyword": "眼镜"}],
+    results: [],
     src: "",
     isCamera: true,
     btnTxt: "拍照",
@@ -145,7 +145,6 @@ Page({
   },
   accessTokenFunc: function() {
     var that = this
-    console.log("accessTokenFunc is start")
     wx.cloud.callFunction({
       name: 'baiduImage',
       success: res => {

@@ -1,0 +1,4 @@
+{"_id":"7aecd51e-e67e-46ed-9d74-48eb22d461fa","id":4.0,"examineIndex":"D","name":"干垃圾"}
+{"_id":"dc98b850-aff3-45cb-8aac-6beea2bfc5d1","examineIndex":"C","name":"湿垃圾","id":3.0}
+{"_id":"e34b718c-a58d-4d33-a7c8-880f5ed8da6a","examineIndex":"B","name":"有害垃圾","id":2.0}
+{"_id":"f87b0283-70dd-4506-bdaf-30360766668e","examineIndex":"A","name":"可回收垃圾","id":1.0}
