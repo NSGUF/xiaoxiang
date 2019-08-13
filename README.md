@@ -22,7 +22,7 @@
 * miniprogram 小程序代码
 
 ## 4、数据库设计
-> 创建以下集合，然后将classify、examineCollection、product导入对应集合中  
+> 创建以下集合，然后将项目目录中database中的数据集classify、examineCollection、product导入对应集合中  
 classify：垃圾类别信息  
 commit：用户帮忙上传的数据库里没有的垃圾信息    
 product：所有的垃圾信息   
