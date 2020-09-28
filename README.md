@@ -8,9 +8,6 @@ github地址：https://github.com/NSGUF/xiaoxiang
 这个小程序功能简单，但是其实主要就是这个数据比较难搞，看到了https://github.com/qi19901212/Garbage这里有个数据，我就跟着也做了一个，本来想直接fork的，
 但是因为每个人的写法都不太一样，改别人的代码其实还没有自己重新写快，所以就直接重新建立了个项目；
 
-**致力于最简洁的设计，最优雅的代码，最快的速度；若觉得产品上或者代码上有哪里可以改进可以给我提issues；如果想提前查看功能可扫描下面二维码查看**  
-![](https://i.imgur.com/noqSGdd.jpg)
-
 ## 2、云开发
 > 云开发确实是给前端程序员的福利噢，只需要注册个人账号，就可以使用微信的云开发，常用的后端操作：数据库（NoSql），文件存储，云函数，增强了前端的能力；基本上我们搞个账号可以免费玩一下；
 
@@ -38,11 +35,11 @@ user：用户基本信息
 
 ## 6、显示
 > 已经在线上发布，可以查看；
-![搜索](images/search.png)  
+![搜索](./images/search.png)  
 
-![首页](images/home.jpg)  
+![首页](./images/home.jpg)  
 
-![测试](images/task.jpg)  
+![测试](./images/task.jpg)  
 
 ![任务](images/my.jpg)
 
