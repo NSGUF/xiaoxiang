@@ -35,13 +35,13 @@ user：用户基本信息
 
 ## 6、显示
 > 已经在线上发布，可以查看；
-![搜索](./images/search.png)  
+![搜索](https://github.com/NSGUF/xiaoxiang/tree/master/images/search.png)  
 
-![首页](./images/home.jpg)  
+![首页](https://github.com/NSGUF/xiaoxiang/tree/master/images/home.jpg)  
 
-![测试](./images/task.jpg)  
+![测试](https://github.com/NSGUF/xiaoxiang/tree/master/images/task.jpg)  
 
-![任务](images/my.jpg)
+![任务](https://github.com/NSGUF/xiaoxiang/tree/master/images/my.jpg)
 
 
 
