@@ -19,7 +19,6 @@ App({
           name: 'login',
           data: {},
           success: res => {
-            console.log('获取用户信息: ', res)
             if (res.result.error === 0) {
               this.globalData.openId = res.result.data.openId
               this.updateUser()
@@ -80,7 +79,6 @@ App({
           },
           updateUser: function() {
             const db = wx.cloud.database()
-            console.log(this.globalData.openId)
             db.collection('user').where({
               openId: this.globalData.openId
             }).field({
@@ -88,7 +86,6 @@ App({
               openId: true,
               userDesc: true,
             }).get().then(res => {
-              console.log(res)
               this.globalData.user = res.data[0]
             })
           },
